@@ -1,7 +1,10 @@
 import random
+import time
 
 num = random.randint(0, 5)
 chute = int(input('Pensei em um número inteiro entre 0 e 5. Advinha qual foi? '))
+print('PROCESSANDO...')
+time.sleep(2)
 if chute == num:
     print('CARALHO! ACERTOU DE PRIMEIRA, ARROMBADO! É {} MESMO!'.format(num))
 elif chute > num:

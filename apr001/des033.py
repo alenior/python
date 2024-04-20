@@ -1,0 +1,6 @@
+num1 = int(input('Informe 0 1º número: '))
+num2 = int(input('Informe o 2º número: '))
+num3 = int(input('Informe o 3º número: '))
+maior = max(num1, num2, num3)
+menor = min(num1, num2, num3)
+print('Dos 3 números informados, o {} é o maior e o {} é o menor.'.format(maior, menor))
