@@ -2,10 +2,10 @@ num = int(input('Informe um número inteiro para convertê-lo para outra base nu
 base = int(input('Escolha a base numérica para converter o número {}: (0: Binário; 1: Octal; 2: Hexadecimal) '.format(num)))
 
 if base == 0:
-    print('O número {} em binário é: {}.'.format(num, bin(num)))
+    print('O número {} em binário é: {}.'.format(num, bin(num)[2:]))
 elif base == 1:
-    print('O número {} em octal é: {}.'.format(num, oct(num)))
+    print('O número {} em octal é: {}.'.format(num, oct(num)[2:]))
 elif base == 2:
-    print('O número {} em hexadecimal é {}.'.format(num, hex(num)))
+    print('O número {} em hexadecimal é {}.'.format(num, hex(num)[2:]))
 else:
     print('Opção inválida. Encerrando programa.')
