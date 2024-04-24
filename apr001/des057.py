@@ -1,4 +1,4 @@
-sexo = str(input('Digite seu sexo [M ou F]: ')).strip().upper()
+sexo = str(input('Digite seu sexo [M ou F]: ')).strip().upper()[0]
 while sexo not in 'MF':
     print('Opção inválida!')
     sexo = str(input('Digite seu sexo [M ou F]: ')).strip().upper()
