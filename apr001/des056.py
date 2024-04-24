@@ -1,16 +1,24 @@
-soma_das_idades = 0
-quantidade = 0
-mulheres_menos_de_20 = 0
-idade_homem_mais_velho = 0
-nome_homem_mais_velho = ''
+somaIdade = 0
+mediaIdade = 0
+maioIdadeHomem = 0
+nomeHomemMaisVelho = ''
+mulherMenosDe20 = 0
 for p in range(1, 5):
-    nome = str(input('Informe o nome da {}ª pessoa: '.format(p)))
-    idade = int(input('Informe a idade da {}ª pessoa: '.format(p)))
-    sexo = str(input('Informe o sexo (m ou f) da {}ª pessoa: '.format(p)))
-    soma_das_idades += idade
-    quantidade += 1
-    if sexo == 'f' and idade < 20:
-        mulheres_menos_de_20 += 1
-    if sexo == 'm' and idade > idade_homem_mais_velho:
-        nome_homem_mais_velho = nome
-print('A média de idade do grupo é {}, a quantidade de mulheres com menos de 20 anos é {} e o nome do homem mais velho é {}.'.format(soma_das_idades / quantidade), mulheres_menos_de_20, nome_homem_mais_velho)
+    print('----- {}ª PESSOA -----'.format(p))
+    nome = str(input('Nome: ')).strip()
+    idade = float(input('Idade: '))
+    sexo = str(input('Sexo [M/F]: ')).strip()
+    somaIdade += idade
+    if p == 1 and sexo in 'Mm':
+        maioIdadeHomem = idade
+        nomeHomemMaisVelho = nome
+    if sexo in 'Mm' and idade > maioIdadeHomem:
+        maioIdadeHomem = idade
+        nomeHomemMaisVelho = nome
+    if sexo in 'Ff' and idade < 20:
+        mulherMenosDe20 += 1
+mediaIdade = somaIdade / 4
+
+print('A média de idade do grupo é {:.1f} anos.'.format(mediaIdade))
+print('O homem mais velho tem {:.0f} anos e se chama {}.'.format(maioIdadeHomem, nomeHomemMaisVelho))
+print('O total de mulheres com menos de 20 anos é {}.'.format(mulherMenosDe20))
