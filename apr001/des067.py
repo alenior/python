@@ -8,3 +8,4 @@ while num >= 0:
         print(f'{num:2} X {cont:2} = {(num * cont):2}')
         cont += 1
     cont = 0
+print(f'\nFim de programa!')

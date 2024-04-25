@@ -16,5 +16,5 @@ while vit != 'Computador':
     else:
         vit = 'Computador'
     cont += 1
-    print(f'Você jogou {jog} e o computador jogou {comp}. Deu {res}. {vit} venceu!')
-print(f'Você jogou {cont} vezes.')
+    print(f'Você jogou {jog} e o computador jogou {comp}. Deu {res}. {vit} venceu!\n')
+print(f'Você jogou {cont} veze(s) antes de perder.')

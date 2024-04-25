@@ -5,14 +5,14 @@ mume20 = 0
 cadastrar = 'S'
 while cadastrar == 'S':
     idade = int(input(f'Informe a idade da {cont}ª pessoa: '))
-    sexo = str(input(f'Informe o sexo da {cont}ª pessoa [M ou S]: ')).strip().upper()
+    sexo = str(input(f'Informe o sexo da {cont}ª pessoa [M ou S]: ')).strip().upper()[0]
     if idade < 18:
         tme18 += 1
     if sexo == 'M':
         hom += 1
     if sexo == 'F' and idade < 20:
         mume20 += 1
-    cadastrar = str(input('Cadastrar outra pessoa? [S ou N] ')).strip().upper()
+    cadastrar = str(input('Cadastrar outra pessoa? [S ou N] ')).strip().upper()[0]
     if cadastrar != 'S':
         break
     cont += 1

@@ -7,4 +7,4 @@ while num != 999:
         break
     cont += 1
     soma += num
-print(f'Você inseriu um total de {cont} números, que somaram {soma}.')
+print(f'\nVocê inseriu um total de {cont} números, que somam {soma}.')
