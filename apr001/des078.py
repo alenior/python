@@ -1,8 +1,24 @@
-qtd = 0
-lista = []
-while qtd < 5:
-    num = int(input(f'Informe o {qtd + 1} número: '))
-    lista.insert(qtd, num)
-    qtd += 1
-print(f'O maior número da lista é o {max(lista)} (posição {lista.index(max(lista)) + 1}) e o menor é o '
-      f'{min(lista)} (posição {lista.index(min(lista)) + 1}.')
+listanum = []
+mai = 0
+men = 0
+for c in range(0, 5):
+    listanum.append(int(input(f'Digite um valor para a posição {c}: ')))
+    if c == 0:
+        mai = men = listanum[c]
+    else:
+        if listanum[c] > mai:
+            mai = listanum[c]
+        if listanum[c] < men:
+            men = listanum[c]
+print(f'=-' * 30)
+print(f'Você digitou os números {listanum}.')
+print(f'O maior valor digitado foi {mai} nas posições ', end='')
+for i, v in enumerate(listanum):
+    if v == mai:
+        print(f'{i}... ', end='')
+print()
+print(f'O menor valor digitado foi {men} nas posições ', end='')
+for i, v in enumerate(listanum):
+    if v == men:
+        print(f'{i}... ', end='')
+print()
